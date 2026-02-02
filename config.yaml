@@ -1,0 +1,30 @@
+# Base configuration. Put secrets in config.local.yaml (ignored by git).
+strava:
+  client_id: ""
+  client_secret: ""
+  refresh_token: ""
+
+sync:
+  lookback_years: 5
+  per_page: 200
+  prune_deleted: false
+
+rate_limits:
+  overall_15_min: 200
+  overall_daily: 2000
+  read_15_min: 100
+  read_daily: 1000
+  safety_buffer: 2
+  min_interval_seconds: 10
+
+activities:
+  types:
+    - Run
+    - Ride
+    - StrengthTraining
+  type_aliases:
+    WeightTraining: StrengthTraining
+
+units:
+  distance: "mi"   # "mi" or "km"
+  elevation: "ft"  # "ft" or "m"

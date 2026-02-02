@@ -1,0 +1,14 @@
+# Secrets / tokens
+config.local.yaml
+.strava_token.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Optional: ignore raw activities if you don't want to publish them
+# activities/raw/
+
+# OS
+.DS_Store
