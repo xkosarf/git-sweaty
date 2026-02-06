@@ -940,42 +940,38 @@ function buildYearMatrix(years, colLabels, matrixValues, color, options = {}) {
     return container;
   }
 
-  const scope = options.cssScope;
-  const layout = getLayout(scope);
-  const axisWidth = readCssVar("--axis-width", 40, scope);
-  const axisGap = readCssVar("--axis-gap", 5, scope);
-  const labelRowHeight = readCssVar("--label-row-height", 44, scope);
   const matrixArea = document.createElement("div");
   matrixArea.className = "axis-matrix-area";
-  matrixArea.style.gridTemplateColumns = `${axisWidth}px max-content`;
-  matrixArea.style.gridTemplateRows = `${labelRowHeight}px auto`;
-  matrixArea.style.columnGap = `${axisGap}px`;
+  matrixArea.style.gridTemplateColumns = "var(--axis-width) max-content";
+  matrixArea.style.gridTemplateRows = "var(--label-row-height) auto";
+  matrixArea.style.columnGap = "var(--axis-gap)";
 
   const monthRow = document.createElement("div");
   monthRow.className = "axis-month-row";
-  monthRow.style.paddingLeft = `${layout.gridPadLeft}px`;
+  monthRow.style.paddingLeft = "var(--grid-pad-left)";
 
   const dayCol = document.createElement("div");
   dayCol.className = "axis-day-col";
-  dayCol.style.paddingTop = `${layout.gridPadTop}px`;
-  dayCol.style.gap = `${layout.gap}px`;
+  dayCol.style.paddingTop = "var(--grid-pad-top)";
+  dayCol.style.gap = "var(--gap)";
 
   years.forEach((year) => {
     const yLabel = document.createElement("div");
     yLabel.className = "day-label axis-y-label";
     yLabel.textContent = String(year);
-    yLabel.style.height = `${layout.cell}px`;
-    yLabel.style.lineHeight = `${layout.cell}px`;
-    yLabel.style.width = `${axisWidth}px`;
+    yLabel.style.height = "var(--cell)";
+    yLabel.style.lineHeight = "var(--cell)";
+    yLabel.style.width = "var(--axis-width)";
+    yLabel.style.paddingRight = "var(--axis-gap)";
     dayCol.appendChild(yLabel);
   });
 
   const grid = document.createElement("div");
   grid.className = "axis-matrix-grid";
-  grid.style.gridTemplateColumns = `repeat(${colLabels.length}, ${layout.cell}px)`;
-  grid.style.gridTemplateRows = `repeat(${years.length}, ${layout.cell}px)`;
-  grid.style.gap = `${layout.gap}px`;
-  grid.style.padding = `${layout.gridPadTop}px ${layout.gridPadRight}px ${layout.gridPadBottom}px ${layout.gridPadLeft}px`;
+  grid.style.gridTemplateColumns = `repeat(${colLabels.length}, var(--cell))`;
+  grid.style.gridTemplateRows = `repeat(${years.length}, var(--cell))`;
+  grid.style.gap = "var(--gap)";
+  grid.style.padding = "var(--grid-pad-top) var(--grid-pad-right) var(--grid-pad-bottom) var(--grid-pad-left)";
 
   const max = matrixValues.reduce(
     (acc, row) => Math.max(acc, ...row),
@@ -988,7 +984,8 @@ function buildYearMatrix(years, colLabels, matrixValues, color, options = {}) {
     const xLabel = document.createElement("div");
     xLabel.className = "month-label axis-x-label";
     xLabel.textContent = label;
-    xLabel.style.left = `${colIndex * (layout.cell + layout.gap)}px`;
+    xLabel.style.left = `calc(${colIndex} * (var(--cell) + var(--gap)))`;
+    xLabel.style.top = "calc(var(--label-row-height) - 16px)";
     if (options.rotateLabels) {
       xLabel.classList.add("diagonal");
     }
