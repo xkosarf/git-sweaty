@@ -6,7 +6,7 @@ Sync Strava activities, normalize and aggregate them, and generate GitHub-style 
 - Once setup is complete, this dashboard link will automatically update to your own GitHub Pages URL.
 
 <!-- HEATMAPS:START -->
-Dashboard preview:
+Preview:
 
 ![Dashboard Preview](site/readme-preview.png)
 <!-- HEATMAPS:END -->
