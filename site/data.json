@@ -5117,6 +5117,12 @@
       "hour": 16,
       "type": "OtherSports",
       "year": 2026
+    },
+    {
+      "date": "2026-02-11",
+      "hour": 11,
+      "type": "OtherSports",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -12584,6 +12590,15 @@
           "distance": 7786.7,
           "elevation_gain": 29.0,
           "moving_time": 6567.0
+        },
+        "2026-02-11": {
+          "activity_ids": [
+            17362881254
+          ],
+          "count": 1,
+          "distance": 4079.6,
+          "elevation_gain": 77.0,
+          "moving_time": 3482.0
         }
       },
       "Run": {
@@ -12718,7 +12733,7 @@
       }
     }
   },
-  "generated_at": "2026-02-11T07:01:11.804695+00:00",
+  "generated_at": "2026-02-12T07:01:36.354752+00:00",
   "type_meta": {
     "OtherSports": {
       "accent": "#f5c2ff",
