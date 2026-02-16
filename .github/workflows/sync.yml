@@ -133,10 +133,9 @@ jobs:
           fi
 
           find "${data_worktree}" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
-          mkdir -p "${data_worktree}/site"
           cp -R data "${data_worktree}/data"
           cp -R heatmaps "${data_worktree}/heatmaps"
-          cp site/data.json "${data_worktree}/site/data.json"
+          cp -R site "${data_worktree}/site"
 
           pushd "${data_worktree}" >/dev/null
           git add -A
