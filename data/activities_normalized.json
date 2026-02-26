@@ -8608,5 +8608,15 @@
     "start_date_local": "2026-02-22T10:20:41Z",
     "type": "Swim",
     "year": 2026
+  },
+  {
+    "date": "2026-02-25",
+    "distance": 3937.7,
+    "elevation_gain": 4.0,
+    "id": 17522111686,
+    "moving_time": 3194.0,
+    "start_date_local": "2026-02-25T19:16:08Z",
+    "type": "OtherSports",
+    "year": 2026
   }
 ]
