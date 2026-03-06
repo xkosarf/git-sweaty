@@ -8648,5 +8648,25 @@
     "start_date_local": "2026-03-03T07:53:46Z",
     "type": "OtherSports",
     "year": 2026
+  },
+  {
+    "date": "2026-03-05",
+    "distance": 2930.8,
+    "elevation_gain": 91.0,
+    "id": 17615124840,
+    "moving_time": 2160.0,
+    "start_date_local": "2026-03-05T17:16:56Z",
+    "type": "OtherSports",
+    "year": 2026
+  },
+  {
+    "date": "2026-03-05",
+    "distance": 3859.7,
+    "elevation_gain": 8.0,
+    "id": 17616558523,
+    "moving_time": 3124.0,
+    "start_date_local": "2026-03-05T18:49:33Z",
+    "type": "OtherSports",
+    "year": 2026
   }
 ]
