@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T07:27:27.434999+00:00",
+  "generated_at": "2026-04-11T07:01:02.684260+00:00",
   "years": {
     "2018": {
       "OtherSports": {
@@ -7711,7 +7711,7 @@
           ],
           "count": 1,
           "distance": 15110.6,
-          "elevation_gain": 0.0,
+          "elevation_gain": 78.0,
           "moving_time": 5270.0
         },
         "2026-04-07": {
