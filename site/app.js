@@ -5,7 +5,7 @@ const FALLBACK_VAPORWAVE = ["#f15bb5", "#fee440", "#00bbf9", "#00f5d4", "#9b5de5
 let TYPE_META = {};
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 const typeButtons = document.getElementById("typeButtons");
 const yearButtons = document.getElementById("yearButtons");
@@ -180,17 +180,17 @@ function alignStackedStatsToYAxisLabels() {
   });
 }
 
-function sundayOnOrBefore(d) {
+function mondayOnOrBefore(d) {
   const day = d.getDay();
-  const offset = day % 7; // Sunday=0
+  const offset = (day + 6) % 7; // Monday=0
   const result = new Date(d);
   result.setDate(d.getDate() - offset);
   return result;
 }
 
-function saturdayOnOrAfter(d) {
+function sundayOnOrAfter(d) {
   const day = d.getDay();
-  const offset = (6 - day + 7) % 7;
+  const offset = (7 - day) % 7;
   const result = new Date(d);
   result.setDate(d.getDate() + offset);
   return result;
@@ -486,8 +486,8 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, options
 
   const yearStart = new Date(year, 0, 1);
   const yearEnd = new Date(year, 11, 31);
-  const start = sundayOnOrBefore(yearStart);
-  const end = saturdayOnOrAfter(yearEnd);
+  const start = mondayOnOrBefore(yearStart);
+  const end = sundayOnOrAfter(yearEnd);
 
   for (let month = 0; month < 12; month += 1) {
     const monthStart = new Date(year, month, 1);
@@ -514,7 +514,7 @@ function buildHeatmapArea(aggregates, year, units, colors, type, layout, options
     };
 
     const weekIndex = Math.floor((day - start) / (1000 * 60 * 60 * 24 * 7));
-    const row = day.getDay(); // Sunday=0
+    const row = (day.getDay() + 6) % 7; // Monday=0
 
     const cell = document.createElement("div");
     cell.className = "cell";
@@ -911,7 +911,7 @@ function buildStatsOverview(payload, types, years, color) {
         const count = entry.count || 0;
         if (count <= 0) return;
         const date = new Date(`${dateStr}T00:00:00`);
-        const dayIndex = date.getDay();
+        const dayIndex = (date.getDay() + 6) % 7; // Monday=0
         const monthIndex = date.getMonth();
         dayMatrix[row][dayIndex] += count;
         monthMatrix[row][monthIndex] += count;
@@ -936,7 +936,7 @@ function buildStatsOverview(payload, types, years, color) {
     return lines.join("\n");
   };
 
-  const dayDisplayLabels = ["Sun", "", "", "Wed", "", "", "Sat"];
+  const dayDisplayLabels = ["Mon", "", "", "Thu", "", "", "Sun"];
   const monthDisplayLabels = ["Jan", "", "Mar", "", "May", "", "Jul", "", "Sep", "", "Nov", ""];
 
   const dayPanel = buildStatPanel("");
@@ -1233,7 +1233,7 @@ function renderStats(payload, types, years, color) {
         const count = entry.count || 0;
         if (count <= 0) return;
         const date = new Date(`${dateStr}T00:00:00`);
-        const dayIndex = date.getDay();
+        const dayIndex = (date.getDay() + 6) % 7; // Monday=0
         const monthIndex = date.getMonth();
         dayMatrix[row][dayIndex] += count;
         monthMatrix[row][monthIndex] += count;
