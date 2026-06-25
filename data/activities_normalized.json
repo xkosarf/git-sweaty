@@ -9298,5 +9298,25 @@
     "start_date_local": "2026-06-22T15:52:36Z",
     "type": "WeightTraining",
     "year": 2026
+  },
+  {
+    "date": "2026-06-24",
+    "distance": 40472.9,
+    "elevation_gain": 63.0,
+    "id": 19052259871,
+    "moving_time": 5009.0,
+    "start_date_local": "2026-06-24T18:23:03Z",
+    "type": "Ride",
+    "year": 2026
+  },
+  {
+    "date": "2026-06-25",
+    "distance": 1200.0,
+    "elevation_gain": 0.0,
+    "id": 19058063424,
+    "moving_time": 2003.0,
+    "start_date_local": "2026-06-25T07:28:00Z",
+    "type": "Swim",
+    "year": 2026
   }
 ]
