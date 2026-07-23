@@ -9528,5 +9528,25 @@
     "start_date_local": "2026-07-21T16:49:02Z",
     "type": "OtherSports",
     "year": 2026
+  },
+  {
+    "date": "2026-07-22",
+    "distance": 3253.2,
+    "elevation_gain": 10.0,
+    "id": 19419361189,
+    "moving_time": 2194.0,
+    "start_date_local": "2026-07-22T16:15:10Z",
+    "type": "OtherSports",
+    "year": 2026
+  },
+  {
+    "date": "2026-07-22",
+    "distance": 41839.7,
+    "elevation_gain": 61.0,
+    "id": 19421417218,
+    "moving_time": 5386.0,
+    "start_date_local": "2026-07-22T18:22:16Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
