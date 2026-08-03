@@ -9588,5 +9588,35 @@
     "start_date_local": "2026-07-31T19:40:54Z",
     "type": "Run",
     "year": 2026
+  },
+  {
+    "date": "2026-08-02",
+    "distance": 1846.0,
+    "elevation_gain": 0.0,
+    "id": 19573412435,
+    "moving_time": 1741.0,
+    "start_date_local": "2026-08-02T17:10:23Z",
+    "type": "OtherSports",
+    "year": 2026
+  },
+  {
+    "date": "2026-08-02",
+    "distance": 5311.3,
+    "elevation_gain": 11.0,
+    "id": 19575356366,
+    "moving_time": 5127.0,
+    "start_date_local": "2026-08-02T19:48:56Z",
+    "type": "OtherSports",
+    "year": 2026
+  },
+  {
+    "date": "2026-08-03",
+    "distance": 43791.1,
+    "elevation_gain": 312.0,
+    "id": 19579917304,
+    "moving_time": 6267.0,
+    "start_date_local": "2026-08-03T08:08:38Z",
+    "type": "Ride",
+    "year": 2026
   }
 ]
