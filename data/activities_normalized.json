@@ -9728,5 +9728,15 @@
     "start_date_local": "2026-08-20T19:09:42Z",
     "type": "OtherSports",
     "year": 2026
+  },
+  {
+    "date": "2026-08-21",
+    "distance": 1989.1,
+    "elevation_gain": 0.0,
+    "id": 19840259758,
+    "moving_time": 1565.0,
+    "start_date_local": "2026-08-21T19:10:48Z",
+    "type": "OtherSports",
+    "year": 2026
   }
 ]
