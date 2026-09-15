@@ -5945,6 +5945,12 @@
       "hour": 19,
       "type": "OtherSports",
       "year": 2026
+    },
+    {
+      "date": "2026-09-14",
+      "hour": 17,
+      "type": "WeightTraining",
+      "year": 2026
     }
   ],
   "aggregates": {
@@ -14732,11 +14738,20 @@
           "distance": 0.0,
           "elevation_gain": 0.0,
           "moving_time": 2868.0
+        },
+        "2026-09-14": {
+          "activity_ids": [
+            20172884423
+          ],
+          "count": 1,
+          "distance": 0.0,
+          "elevation_gain": 0.0,
+          "moving_time": 3521.0
         }
       }
     }
   },
-  "generated_at": "2026-09-14T11:54:14.200867+00:00",
+  "generated_at": "2026-09-15T11:09:16.868905+00:00",
   "type_meta": {
     "OtherSports": {
       "accent": "#f5c2ff",
